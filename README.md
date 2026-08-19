@@ -1,4 +1,4 @@
-# 🛒 Food Mart Retail Performance Analytics
+# Food Mart Retail Performance Analytics
 
 **End-to-end retail analytics project** — data cleaning (Python), dimensional data modeling, and an interactive 4-page Power BI dashboard analyzing sales, profitability, customer behavior, and product returns across a multi-region grocery retail chain.
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Project Summary
+## Project Summary
 
 Food Mart is a multi-region grocery retail chain (supermarkets, deluxe supermarkets, gourmet supermarkets, mid-size and small grocery formats) operating across **North West, South West, Central West, Mexico Central, Mexico South, Mexico West, and Canada West** sales regions. Leadership needed a single source of truth to answer four recurring business questions:
 
@@ -22,7 +22,7 @@ This project takes raw transactional CSV extracts (sales, returns, customers, pr
 
 ---
 
-## 🎯 Business Objectives
+## Business Objectives
 
 | # | Objective | Dashboard Page |
 |---|-----------|-----------------|
@@ -33,7 +33,7 @@ This project takes raw transactional CSV extracts (sales, returns, customers, pr
 
 ---
 
-## 🖥️ Dashboard Preview
+## Dashboard Preview
 
 ### Overview
 ![Overview](assets/screenshots/01_overview.png)
@@ -51,7 +51,7 @@ Full page-by-page walkthrough (visuals, filters, and how to read each chart) is 
 
 ---
 
-## 📊 Key KPIs (as of latest refresh)
+## Key KPIs (as of latest refresh)
 
 | KPI | Value |
 |---|---|
@@ -82,7 +82,7 @@ The dashboard surfaces several patterns worth investigating further. The bullets
 
 ---
 
-## 🏗️ Repository Structure
+## Repository Structure
 
 ```
 food-mart-retail-performance-analytics/
@@ -115,7 +115,7 @@ food-mart-retail-performance-analytics/
 
 ---
 
-## 🧱 Data Model
+## Data Model
 
 Star schema with **2 fact tables** and **4 dimension tables**, built in Power BI's internal model after cleaning in Python:
 
@@ -128,7 +128,7 @@ Full relationship cardinalities, keys, and measure list: **[`powerbi/model_docum
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Layer | Tool |
 |---|---|
@@ -140,40 +140,7 @@ Full relationship cardinalities, keys, and measure list: **[`powerbi/model_docum
 
 ---
 
-## 🔁 Reproducibility / Setup
-
-### Prerequisites
-- Python 3.10+
-- Power BI Desktop (Windows) to open/edit the `.pbix` file — Power BI files cannot be edited on macOS/Linux, only viewed via Power BI Service if published
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/<your-username>/food-mart-retail-performance-analytics.git
-cd food-mart-retail-performance-analytics
-```
-
-### 2. Set up the Python environment
-```bash
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-### 3. Add the raw data
-Place the seven raw source files into `data/raw/` (see **[`data/README.md`](data/README.md)** for the exact filenames expected and how to obtain them — **`TODO`: raw data is not included in this repository**).
-
-### 4. Run the cleaning notebook
-```bash
-jupyter notebook notebooks/01_data_cleaning_and_preparation.ipynb
-```
-This produces cleaned, type-cast, de-duplicated Parquet files in `data/processed/`.
-
-### 5. Open the dashboard
-Open `powerbi/Food_Mart_Retail_Performance.pbix` in Power BI Desktop. If you want to rebuild the model from scratch against your own refreshed Parquet files, repoint Power Query's data source to `data/processed/`.
-
----
-
-## 📂 Documentation Index
+## Documentation Index
 
 | Document | Purpose |
 |---|---|
@@ -186,7 +153,7 @@ Open `powerbi/Food_Mart_Retail_Performance.pbix` in Power BI Desktop. If you wan
 
 ---
 
-## 🚧 Known Gaps / TODOs
+## Known Gaps / TODOs
 
 This repository was built directly from the analyst's working files (notebook + `.pbix` + dashboard screenshots). A few items could not be verified from those files alone and are flagged rather than guessed at:
 
@@ -195,15 +162,3 @@ This repository was built directly from the analyst's working files (notebook + 
 - [ ] **`dim region` table** — the cleaning notebook loads a `Region.csv` file (used to fix a `"Marida"` → `"Merida"` typo), but the final data model diagram only shows `dim stores`, `dim date`, `dim products`, `dim customers`, and the two fact tables. Confirm whether region data was merged into `dim stores` (which does contain `sales_region`/`region_id` fields) or is a separate hidden table.
 - [ ] **Written "so what" analysis** — the Key Findings section above lists what's visible in the charts; a deeper narrative (root causes, recommendations, $ impact estimates) should be added once the analyst reviews the data further.
 - [ ] Add a project cover image / GIF walkthrough of the report for extra portfolio polish (optional).
-
----
-
-## 👤 Author
-
-**TODO:** Add your name, LinkedIn, and portfolio link here.
-
----
-
-## 📄 License
-
-This project's code and documentation are licensed under the [MIT License](LICENSE). The underlying dataset's license/source is a separate `TODO` — see `data/README.md`.
