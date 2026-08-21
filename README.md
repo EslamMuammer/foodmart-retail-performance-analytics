@@ -68,7 +68,7 @@ Full page-by-page walkthrough (visuals, filters, and how to read each chart) is 
 
 ---
 
-## 🔎 Key Findings *(TODO — confirm/expand with analyst commentary)*
+## 🔎 Key Findings
 
 The dashboard surfaces several patterns worth investigating further. The bullets below are **directly observable from the visuals** in this repo's screenshots; deeper causal analysis (why margins differ, why specific stores return more, seasonality drivers, etc.) is flagged as `TODO` for follow-up written analysis.
 
