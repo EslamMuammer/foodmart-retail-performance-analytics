@@ -46,8 +46,6 @@ This project takes raw transactional CSV extracts (sales, returns, customers, pr
 ### Returns & Quality
 ![Returns & Quality](assets/screenshots/04_returns_quality.png)
 
-Full page-by-page walkthrough (visuals, filters, and how to read each chart) is documented in **[`docs/dashboard_guide.md`](docs/dashboard_guide.md)**.
-
 ---
 
 ## Key KPIs (as of latest refresh)
@@ -63,8 +61,6 @@ Full page-by-page walkthrough (visuals, filters, and how to read each chart) is 
 | Sales Value per Customer | 199.56 |
 | Units per Customer | 94.26 |
 | Returned Units | 8.3K |
-
-> Full metric definitions and business interpretation are in **[`docs/kpis_and_insights.md`](docs/kpis_and_insights.md)**.
 
 ---
 
