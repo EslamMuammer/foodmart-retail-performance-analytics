@@ -90,4 +90,3 @@ Full relationship cardinalities, keys, and measure list: **[`powerbi/model_docum
 | Data modeling & DAX measures | Power BI (Power Query + Tabular model) |
 | Visualization / reporting | Power BI Desktop (4-page interactive report) |
 | Exploratory profiling (optional) | Matplotlib, Seaborn |
-
