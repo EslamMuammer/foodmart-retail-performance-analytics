@@ -59,11 +59,3 @@ Gender split is **49.45% F / 50.55% M**, marital status is **49.59% S / 50.41% M
 ### 6. Price and profit scale together, with a few high-value outliers
 The "Revenue vs Gross Profit by Product Price" scatter shows a tight, near-linear relationship for most products, with one clear outlier point at a much higher price/profit level than the rest of the cluster.
 > **Next step:** identify that outlier product specifically and confirm whether it's a data entry issue (e.g., wrong unit of price) or a genuine premium SKU worth featuring/promoting.
-
----
-
-## Suggested Follow-Up Analysis (Not Yet Done — `TODO`)
-- Profit margin normalized by store size (`grocery_sqft`) and by region.
-- Return **rate** (not raw count) by brand and by store, to separate "sells a lot" from "has a quality problem."
-- Cohort/retention view of customers using `acct_open_date` (currently loaded but not visualized).
-- Statistical significance check on the Q4 seasonality pattern once more years of data are available (only 1997–1998 currently in scope).
