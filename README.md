@@ -149,15 +149,3 @@ Full relationship cardinalities, keys, and measure list: **[`powerbi/model_docum
 | [`docs/dashboard_guide.md`](docs/dashboard_guide.md) | How to read and use each dashboard page |
 | [`powerbi/model_documentation.md`](powerbi/model_documentation.md) | Data model schema and DAX measure inventory |
 | [`data/README.md`](data/README.md) | Data source, provenance, and licensing notes |
-
----
-
-## Known Gaps / TODOs
-
-This repository was built directly from the analyst's working files (notebook + `.pbix` + dashboard screenshots). A few items could not be verified from those files alone and are flagged rather than guessed at:
-
-- [ ] **Raw data source/license** — confirm the original dataset provider and add a citation/link in `data/README.md`.
-- [ ] **Exact DAX formula text** for each measure — the measure *names* were extracted directly from the Power BI model, but the formula logic should be copied in from Power BI Desktop's Measure editor into `powerbi/model_documentation.md`.
-- [ ] **`dim region` table** — the cleaning notebook loads a `Region.csv` file (used to fix a `"Marida"` → `"Merida"` typo), but the final data model diagram only shows `dim stores`, `dim date`, `dim products`, `dim customers`, and the two fact tables. Confirm whether region data was merged into `dim stores` (which does contain `sales_region`/`region_id` fields) or is a separate hidden table.
-- [ ] **Written "so what" analysis** — the Key Findings section above lists what's visible in the charts; a deeper narrative (root causes, recommendations, $ impact estimates) should be added once the analyst reviews the data further.
-- [ ] Add a project cover image / GIF walkthrough of the report for extra portfolio polish (optional).
