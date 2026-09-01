@@ -73,8 +73,6 @@ Star schema with **2 fact tables** and **4 dimension tables**, built in Power BI
 
 ![Data Model](assets/screenshots/05_data_model_relationships.png)
 
-Full relationship cardinalities, keys, and measure list: **[`powerbi/model_documentation.md`](powerbi/model_documentation.md)**.
-
 ---
 
 ## Tech Stack
